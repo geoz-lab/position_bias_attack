@@ -1,0 +1,5 @@
+model,architecture,attention,ndcg_at_10,curve_range_irrelevant,tau_kendall,promo_at_5_irrelevant,rank_gain_irrelevant,into_top5_irrelevant,R,source,notes
+causal_llama3b,decoder-only,causal,0.8287,3.09,0.8451,0.120,3.34,0.273,50,results_by_model_dataset.csv,anchor Llama-3.2-3B (LambdaRank, mean-logprob)
+listt5_encoder,encoder-decoder (T5 encoder),bidirectional,0.8764,0.71,0.9131,0.057,1.88,0.197,50,listt5-eval-33822079,flan-t5-base encoder scorer; softmax-CE (RankT5) + lr 1e-3 + LoRA r32; 2000 steps
+architectural_invariance,decoder-only (constrained),block-mask + shared-pos,0.7840,0.06,0.9916,0.000,0.22,0.157,50,results_by_model_dataset.csv,anchor invariant
+pointwise_reference,decoder-only (isolated scoring),n/a,0.7628,0.0,1.0,0.000,0.0,0.157,50,defense_matrix.csv / pointwise_adv,invariant by construction; into5=content base rate; O(K) cost

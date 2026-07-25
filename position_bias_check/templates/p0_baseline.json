@@ -1,0 +1,9 @@
+{
+  "name": "p0_baseline",
+  "description": "CONTROL. Byte-identical to InvariRank's default instruction. Reproduces the known causal number inside this harness so the treatment prompts have a same-run baseline to be compared against.",
+  "instruction": "Given the user's interaction history, rank the candidate items according to the user's preferences.",
+  "history_header": "User history:",
+  "history_item_format": "title: {title}{year_text}{rating_text}{genres_text}",
+  "candidate_item_format": "{title}{year_text}{genres_text}",
+  "candidate_separator": ""
+}

@@ -1,0 +1,31 @@
+dataset,model_tag,hf_model_id,variant,seed,n_samples,ndcg_at_10,tau_kendall,curve_range_irrelevant,promo_at_5_irrelevant,rank_gain_irrelevant,into_top5_irrelevant,notes
+movielens,qwen3-0.6b,Qwen/Qwen3-0.6B,causal,42,300,0.7906,0.8554,1.48,0.130,3.16,0.270,
+movielens,qwen3-1.7b,Qwen/Qwen3-1.7B,causal,42,300,0.7511,0.8672,0.84,0.100,2.83,0.227,"kept from harness-validation run (predates causal-only scope decision); both variants exist"
+movielens,qwen3-1.7b,Qwen/Qwen3-1.7B,invariant,42,300,0.7623,0.9858,0.10,0.007,0.36,0.130,"kept from harness-validation run"
+movielens,qwen3-4b,Qwen/Qwen3-4B,causal,42,300,0.7982,0.8674,2.63,0.100,2.74,0.260,
+movielens,qwen3-8b,Qwen/Qwen3-8B,causal,42,300,0.8170,0.8828,0.98,0.097,2.36,0.253,
+movielens,qwen3-14b,Qwen/Qwen3-14B,causal,42,300,0.8294,0.8583,2.74,0.140,3.04,0.277,
+movielens,llama8b,meta-llama/Llama-3.1-8B-Instruct,causal,42,300,0.8181,0.8793,2.10,0.113,2.77,0.273,
+movielens,mistral7b,mistralai/Mistral-7B-Instruct-v0.3,causal,42,300,0.8653,0.8626,2.78,0.147,3.48,0.280,
+movielens,llama3b (anchor),meta-llama/Llama-3.2-3B-Instruct,causal,42,300,0.8287,0.8451,3.09,0.120,3.34,0.273,"OFFICIAL 10000-user Table-1 run; the number to cite for the anchor causal model. Do not confuse with the earlier 5000-user preliminary run's nDCG=0.8231/tau=0.8707 for the same model."
+movielens,llama3b (anchor),meta-llama/Llama-3.2-3B-Instruct,invariant,42,300,0.7840,0.9916,0.06,0.000,0.22,0.157,"OFFICIAL 10000-user run. Not the 5000-user prelim's 0.7860/0.9911."
+movielens,llama3b_s1,meta-llama/Llama-3.2-3B-Instruct,causal,1,300,0.8318,0.8162,4.53,0.183,4.51,0.317,"3-seed variance run"
+movielens,llama3b_s2,meta-llama/Llama-3.2-3B-Instruct,causal,2,300,0.8379,0.8825,2.19,0.147,2.82,0.253,"3-seed variance run"
+amazon_books,qwen3-0.6b,Qwen/Qwen3-0.6B,causal,42,300,0.5338,0.5591,7.09,0.497,7.91,0.660,
+amazon_books,qwen3-1.7b,Qwen/Qwen3-1.7B,causal,42,300,0.5653,0.5882,4.52,0.427,7.33,0.590,
+amazon_books,qwen3-4b,Qwen/Qwen3-4B,causal,42,300,0.5966,0.5628,5.63,0.497,7.97,0.643,
+amazon_books,qwen3-8b,Qwen/Qwen3-8B,causal,42,300,0.6162,0.5449,8.07,0.570,8.30,0.730,
+amazon_books,qwen3-14b,Qwen/Qwen3-14B,causal,42,300,0.6326,0.5509,5.38,0.477,7.88,0.660,
+amazon_books,llama8b,meta-llama/Llama-3.1-8B-Instruct,causal,42,300,0.6104,0.5647,7.86,0.497,7.62,0.657,
+amazon_books,mistral7b,mistralai/Mistral-7B-Instruct-v0.3,causal,42,300,0.6461,0.5467,8.65,0.540,8.01,0.723,
+amazon_books,llama3b (anchor),meta-llama/Llama-3.2-3B-Instruct,causal,42,300,0.6177,0.5631,6.62,0.480,8.10,0.670,
+amazon_books,llama3b (anchor),meta-llama/Llama-3.2-3B-Instruct,invariant,42,300,0.5096,0.9895,0.06,0.000,0.21,0.217,"defense quality cost is largest on this domain (0.6177->0.5096, ~17% relative)"
+amazon_fashion,qwen3-0.6b,Qwen/Qwen3-0.6B,causal,42,300,0.3981,0.6412,5.31,0.353,6.43,0.513,
+amazon_fashion,qwen3-1.7b,Qwen/Qwen3-1.7B,causal,42,300,0.4252,0.7060,2.79,0.227,5.13,0.377,
+amazon_fashion,qwen3-4b,Qwen/Qwen3-4B,causal,42,300,0.4321,0.6511,4.07,0.387,6.41,0.547,
+amazon_fashion,qwen3-8b,Qwen/Qwen3-8B,causal,42,300,0.4353,0.6879,2.71,0.317,5.40,0.470,
+amazon_fashion,qwen3-14b,Qwen/Qwen3-14B,causal,42,300,0.4325,0.6890,3.90,0.273,5.58,0.473,
+amazon_fashion,llama8b,meta-llama/Llama-3.1-8B-Instruct,causal,42,300,0.4184,0.7021,2.76,0.270,5.13,0.447,
+amazon_fashion,mistral7b,mistralai/Mistral-7B-Instruct-v0.3,causal,42,300,0.4478,0.6729,4.69,0.267,5.90,0.447,
+amazon_fashion,llama3b (anchor),meta-llama/Llama-3.2-3B-Instruct,causal,42,300,0.4486,0.6612,4.12,0.297,5.99,0.467,
+amazon_fashion,llama3b (anchor),meta-llama/Llama-3.2-3B-Instruct,invariant,42,300,0.4235,0.9842,0.06,0.003,0.37,0.183,

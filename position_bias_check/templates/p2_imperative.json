@@ -1,0 +1,9 @@
+{
+  "name": "p2_imperative",
+  "description": "TREATMENT / style: terse imperative commands. Short, direct orders to ignore list order. Tests whether a blunt command style suppresses the bias.",
+  "instruction": "Rank the candidate items by relevance to the user's history. Ignore the list order. Do not favor earlier or later items. The position of a candidate is random and carries no meaning: judge content only.",
+  "history_header": "User history:",
+  "history_item_format": "title: {title}{year_text}{rating_text}{genres_text}",
+  "candidate_item_format": "{title}{year_text}{genres_text}",
+  "candidate_separator": ""
+}

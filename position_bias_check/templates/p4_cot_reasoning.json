@@ -1,0 +1,9 @@
+{
+  "name": "p4_cot_reasoning",
+  "description": "TREATMENT / style: chain-of-thought / step-by-step. Prescribes a per-item-then-compare reasoning procedure and asserts order-invariance of the result.",
+  "instruction": "Given the user's interaction history, rank the candidate items by preference. Reason step by step: first read each candidate on its own and assess how relevant it is to the user, independent of the other candidates; then compare those per-item assessments to produce the final ranking. Because the input order is arbitrary, the ranking you produce must be the same no matter how the candidates were ordered.",
+  "history_header": "User history:",
+  "history_item_format": "title: {title}{year_text}{rating_text}{genres_text}",
+  "candidate_item_format": "{title}{year_text}{genres_text}",
+  "candidate_separator": ""
+}

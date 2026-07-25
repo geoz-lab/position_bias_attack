@@ -1,0 +1,9 @@
+{
+  "name": "p1_set_framing",
+  "description": "TREATMENT / style: declarative prose, SET framing. Natural-language statement that the candidates are an unordered set to be judged on merit, not position.",
+  "instruction": "Given the user's interaction history, rank the following candidate items by how well they match the user's preferences. The candidates are provided together as an unordered set: consider all of them as a group and judge each item only on its own merits, not on where it appears in the list.",
+  "history_header": "User history:",
+  "history_item_format": "title: {title}{year_text}{rating_text}{genres_text}",
+  "candidate_item_format": "{title}{year_text}{genres_text}",
+  "candidate_separator": ""
+}

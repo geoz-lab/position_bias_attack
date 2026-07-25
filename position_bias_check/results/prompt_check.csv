@@ -1,0 +1,13 @@
+variant,stratum,curve_range,best_rank,worst_rank,promo@5,rank_gain,into_top5,n
+p0_baseline,irrelevant,3.09,9.83,12.92,0.12,3.345,0.2733,300
+p0_baseline,strong_pos,2.93,2.223,5.153,0.1167,1.753,0.9333,300
+p1_set_framing,irrelevant,3.117,9.78,12.897,0.12,3.479,0.2767,300
+p1_set_framing,strong_pos,2.93,2.217,5.147,0.1067,1.758,0.93,300
+p2_imperative,irrelevant,3.15,9.75,12.9,0.1233,3.482,0.28,300
+p2_imperative,strong_pos,2.737,2.22,4.957,0.11,1.777,0.9367,300
+p3_persona,irrelevant,2.933,9.88,12.813,0.1267,3.143,0.2733,300
+p3_persona,strong_pos,3.07,2.213,5.283,0.1167,1.726,0.9233,300
+p4_cot_reasoning,irrelevant,3.2,9.703,12.903,0.1233,3.531,0.2767,300
+p4_cot_reasoning,strong_pos,2.317,2.233,4.55,0.1133,1.747,0.9367,300
+p5_structured_rules,irrelevant,3.033,9.827,12.86,0.13,3.396,0.28,300
+p5_structured_rules,strong_pos,2.953,2.177,5.13,0.1233,1.768,0.9367,300

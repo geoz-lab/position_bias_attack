@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# Data / model caches / run outputs (regenerated, not versioned)
+data/
+runs/
+hf_cache/
+*.ckpt
+*.safetensors

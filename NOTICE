@@ -1,0 +1,54 @@
+NOTICE
+======
+
+This repository accompanies our paper on position bias in LLM listwise
+rerankers as an exploitable attack surface. It bundles two components with
+different provenance.
+
+------------------------------------------------------------------------
+1. Vendored third-party code — InvariRank
+------------------------------------------------------------------------
+
+The following top-level directories and files are a redistributed copy of the
+InvariRank reference implementation and are NOT our contribution:
+
+    config.py
+    configs/
+    datasets/
+    model/
+    prompts/
+    ranking/
+    retriever/
+    scripts/
+    training/
+    requirements.txt
+    pyproject.toml
+
+InvariRank is the method from:
+
+    Ethan Bito, Yongli Ren, and Estrid He.
+    "One Pass, Any Order: Position-Invariant Listwise Reranking for
+     LLM-Based Recommendation." SIGIR 2026 (short paper).
+    arXiv:2604.27599 — https://arxiv.org/abs/2604.27599
+
+It is redistributed here under its original MIT License (Copyright (c) 2026
+Ethan Bito), a copy of which is included as LICENSE-InvariRank. We vendor it
+only so that the analysis code in position_bias/ and position_bias_check/ —
+which imports these modules (model loading, InvariRank mask/position logic,
+prompt building, mean-log-prob scoring, dataset builders) — runs out of the
+box. Upstream: https://arxiv.org/abs/2604.27599 (see the InvariRank paper/repo
+for the canonical version).
+
+In our terminology, the vulnerable default this project attacks is the
+"causal" reranker (standard attention + RoPE), which corresponds to InvariRank's
+LFT baseline; the "position-invariant" reranker (structured mask + shared
+candidate position ids) is InvariRank's defense mechanism, which we evaluate as
+one of several defenses.
+
+------------------------------------------------------------------------
+2. Our contribution
+------------------------------------------------------------------------
+
+The directories position_bias/ and position_bias_check/ (analysis scripts +
+verified results) are our own work, released under the MIT License in the
+LICENSE file (Copyright (c) 2026 Geo Zhang).

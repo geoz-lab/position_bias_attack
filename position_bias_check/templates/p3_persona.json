@@ -1,0 +1,9 @@
+{
+  "name": "p3_persona",
+  "description": "TREATMENT / style: role / persona. Assigns the model the identity of a position-invariant reranker whose defining property is order-independence.",
+  "instruction": "You are a position-invariant recommendation reranker. Your defining property is that your output depends only on item content and the user's history, never on the order in which candidates are fed to you. Acting as this reranker, rank the candidate items by how well each matches the user's preferences.",
+  "history_header": "User history:",
+  "history_item_format": "title: {title}{year_text}{rating_text}{genres_text}",
+  "candidate_item_format": "{title}{year_text}{genres_text}",
+  "candidate_separator": ""
+}

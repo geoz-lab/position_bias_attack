@@ -1,0 +1,231 @@
+{
+  "config": "/scratch/users/gmzhang/invarirank/configs/promptcheck/rank_p1_set_framing.yaml",
+  "num_samples_used": 300,
+  "K_distribution": {
+    "25": 600
+  },
+  "curve": {
+    "irrelevant": {
+      "0": {
+        "mean_output_rank": 12.276666666666667,
+        "n": 300
+      },
+      "1": {
+        "mean_output_rank": 10.673333333333334,
+        "n": 300
+      },
+      "2": {
+        "mean_output_rank": 10.01,
+        "n": 300
+      },
+      "3": {
+        "mean_output_rank": 9.78,
+        "n": 300
+      },
+      "4": {
+        "mean_output_rank": 10.05,
+        "n": 300
+      },
+      "5": {
+        "mean_output_rank": 10.103333333333333,
+        "n": 300
+      },
+      "6": {
+        "mean_output_rank": 10.283333333333333,
+        "n": 300
+      },
+      "7": {
+        "mean_output_rank": 10.303333333333333,
+        "n": 300
+      },
+      "8": {
+        "mean_output_rank": 10.356666666666667,
+        "n": 300
+      },
+      "9": {
+        "mean_output_rank": 10.363333333333333,
+        "n": 300
+      },
+      "10": {
+        "mean_output_rank": 10.416666666666666,
+        "n": 300
+      },
+      "11": {
+        "mean_output_rank": 10.51,
+        "n": 300
+      },
+      "12": {
+        "mean_output_rank": 11.353333333333333,
+        "n": 300
+      },
+      "13": {
+        "mean_output_rank": 11.746666666666666,
+        "n": 300
+      },
+      "14": {
+        "mean_output_rank": 12.16,
+        "n": 300
+      },
+      "15": {
+        "mean_output_rank": 12.3,
+        "n": 300
+      },
+      "16": {
+        "mean_output_rank": 12.27,
+        "n": 300
+      },
+      "17": {
+        "mean_output_rank": 12.476666666666667,
+        "n": 300
+      },
+      "18": {
+        "mean_output_rank": 12.673333333333334,
+        "n": 300
+      },
+      "19": {
+        "mean_output_rank": 12.696666666666667,
+        "n": 300
+      },
+      "20": {
+        "mean_output_rank": 12.733333333333333,
+        "n": 300
+      },
+      "21": {
+        "mean_output_rank": 12.73,
+        "n": 300
+      },
+      "22": {
+        "mean_output_rank": 12.896666666666667,
+        "n": 300
+      },
+      "23": {
+        "mean_output_rank": 12.696666666666667,
+        "n": 300
+      },
+      "24": {
+        "mean_output_rank": 12.66,
+        "n": 300
+      }
+    },
+    "strong_pos": {
+      "0": {
+        "mean_output_rank": 5.1466666666666665,
+        "n": 300
+      },
+      "1": {
+        "mean_output_rank": 3.6566666666666667,
+        "n": 300
+      },
+      "2": {
+        "mean_output_rank": 3.1333333333333333,
+        "n": 300
+      },
+      "3": {
+        "mean_output_rank": 2.6933333333333334,
+        "n": 300
+      },
+      "4": {
+        "mean_output_rank": 2.5966666666666667,
+        "n": 300
+      },
+      "5": {
+        "mean_output_rank": 2.5166666666666666,
+        "n": 300
+      },
+      "6": {
+        "mean_output_rank": 2.41,
+        "n": 300
+      },
+      "7": {
+        "mean_output_rank": 2.3933333333333335,
+        "n": 300
+      },
+      "8": {
+        "mean_output_rank": 2.3466666666666667,
+        "n": 300
+      },
+      "9": {
+        "mean_output_rank": 2.216666666666667,
+        "n": 300
+      },
+      "10": {
+        "mean_output_rank": 2.26,
+        "n": 300
+      },
+      "11": {
+        "mean_output_rank": 2.3766666666666665,
+        "n": 300
+      },
+      "12": {
+        "mean_output_rank": 2.26,
+        "n": 300
+      },
+      "13": {
+        "mean_output_rank": 2.29,
+        "n": 300
+      },
+      "14": {
+        "mean_output_rank": 2.3,
+        "n": 300
+      },
+      "15": {
+        "mean_output_rank": 2.31,
+        "n": 300
+      },
+      "16": {
+        "mean_output_rank": 2.236666666666667,
+        "n": 300
+      },
+      "17": {
+        "mean_output_rank": 2.36,
+        "n": 300
+      },
+      "18": {
+        "mean_output_rank": 2.3266666666666667,
+        "n": 300
+      },
+      "19": {
+        "mean_output_rank": 2.3066666666666666,
+        "n": 300
+      },
+      "20": {
+        "mean_output_rank": 2.3033333333333332,
+        "n": 300
+      },
+      "21": {
+        "mean_output_rank": 2.3366666666666664,
+        "n": 300
+      },
+      "22": {
+        "mean_output_rank": 2.4066666666666667,
+        "n": 300
+      },
+      "23": {
+        "mean_output_rank": 2.3233333333333333,
+        "n": 300
+      },
+      "24": {
+        "mean_output_rank": 2.29,
+        "n": 300
+      }
+    }
+  },
+  "summary": {
+    "irrelevant": {
+      "position_effect_range": 3.116666666666667,
+      "best_mean_rank": 9.78,
+      "worst_mean_rank": 12.896666666666667,
+      "best_case_into_top5_rate": 0.32,
+      "best_case_into_top1_rate": 0.06666666666666667,
+      "n_cstar": 300
+    },
+    "strong_pos": {
+      "position_effect_range": 2.9299999999999997,
+      "best_mean_rank": 2.216666666666667,
+      "worst_mean_rank": 5.1466666666666665,
+      "best_case_into_top5_rate": 0.9133333333333333,
+      "best_case_into_top1_rate": 0.6166666666666667,
+      "n_cstar": 300
+    }
+  }
+}

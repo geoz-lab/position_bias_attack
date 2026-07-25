@@ -1,0 +1,9 @@
+{
+  "name": "p5_structured_rules",
+  "description": "TREATMENT / style: structured numbered rules / constraints. Same intent as the others, rendered as an explicit rule list rather than prose. Tests a format-heavy instruction style.",
+  "instruction": "Task: rank the candidate items for the user.\nRules:\n1. Treat the candidates as an unordered set.\n2. The listed order is random and must be ignored.\n3. Score each item only by its relevance to the user's interaction history.\n4. An item's rank must not change if the list is reshuffled.\nRank the items following these rules.",
+  "history_header": "User history:",
+  "history_item_format": "title: {title}{year_text}{rating_text}{genres_text}",
+  "candidate_item_format": "{title}{year_text}{genres_text}",
+  "candidate_separator": ""
+}
