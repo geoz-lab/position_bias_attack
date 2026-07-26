@@ -193,7 +193,7 @@ python scan_position.py --config <rank_cfg> --num-samples 300 --out scan.json
 # RQ2 — budget-R permutation attacker. "Try R orderings, keep the best for the
 # target." promo@5 = fraction of below-top-5 irrelevant targets forced into top-5.
 python adversarial_perm.py --config <rank_cfg> -R 50 --num-samples 300 --out adv.json
-#   attack-budget curve (Fig. 5):  add  --r-grid 1,5,10,20,50,100
+#   attack-budget curve (Fig. 5, R_max=R=50):  add  --r-grid 1,5,10,20,50
 
 # RQ3 — position vs content 2×2 attribution.
 python content_vs_position.py --config <rank_cfg> --num-samples 300 --out pvc.json
@@ -214,11 +214,16 @@ python bootstrap_ci.py adv.json --all-R --out results/budget_curve_ci.csv
 python analyze_correlation.py     # reads results/correlation_data.csv
 
 # B1 — pointwise on the budget axis (flat ≈0 by construction)
-python pointwise_adv.py --config <rank_cfg> -R 100 --r-grid 1,5,10,20,50,100 --out pw_adv.json
+python pointwise_adv.py --config <rank_cfg> -R 50 --r-grid 1,5,10,20,50 --out pw_adv.json
 
 # B4 — encoder-decoder (T5) comparison: train the scorer, then the same 3 probes
 python train_listt5_scorer.py --config <listt5_cfg>
 python listt5_eval.py --config <listt5_cfg> --scorer encode --task all --out-dir listt5_out
+
+# B4 budget curve (Fig 5 ListT5 row), R_max=R=50:
+python listt5_eval.py --config <listt5_cfg> --scorer encode --task adv \
+       -R 50 --r-grid 1,5,10,20,50 --num-samples 300 --out-dir listt5_out
+#   b4_budget_t5.sbatch wraps this invocation for SLURM/Sherlock.
 ```
 
 ### Prompt ablation — can prompting remove the bias? (`position_bias_check/`)

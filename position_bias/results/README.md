@@ -65,20 +65,25 @@ dump), `bootstrap_ci.py`, `analyze_correlation.py`, `pointwise_adv.py`, `listt5_
 `train_listt5_scorer.py` (T5 encoder scorer), `render_defense.sh`/`run_defenses.sh` (now `DATA_DIR`-aware).
 
 ## `budget_curve.csv` (B1) — attack-budget curve → Fig 5
-One row per `(model, R)`. `model` ∈ {causal, ListT5, invariant, pointwise}; `R` ∈ {1,5,10,20,50,100};
+One row per `(model, R)`. `model` ∈ {causal, ListT5, invariant, pointwise}; `R` ∈ {1,5,10,20,50};
 `promo` = promo@5 on the irrelevant stratum; `ci_lo`/`ci_hi` = 95% bootstrap CI (blank where not filled).
-Sources: `adversarial_perm.py -R 100 --r-grid …` (causal/invariant), `pointwise_adv.py` (pointwise, 0 by
-construction), `listt5_eval.py --scorer encode` (ListT5).
-**Headline:** exploitability *scales with attacker budget* for causal (0.027→0.180) and ListT5
-(0.003→0.070), but is *budget-independent* for the defenses (invariant/pointwise flat ≈0). R=50 is not a
-cherry-picked operating point.
+All rows use the **R_max = R = 50** convention: each target's attack-free rank is averaged over the full
+50-ordering pool, so promo@k is monotone in budget and R=50 is the headline. Sources: the causal curve is
+`bootstrap_ci.py` on the in-repo anchor run `../../position_bias_check/results/raw/adv_p0_baseline.json`
+(fully reproducible from this repo; its summary equals Table 1's promo@5 = 0.120); ListT5 from
+`listt5_eval.py --scorer encode` at R_max=50 (`b4_budget_t5.sbatch`); invariant from `adversarial_perm.py`
+on the invariant adapter; pointwise 0 by construction.
+**Headline:** exploitability *scales with attacker budget* for causal (0.023→0.120) and ListT5
+(0.007→0.057), but is *budget-independent* for the defenses (invariant/pointwise flat at 0). R=50 is the
+end of a smooth curve, not a cherry-picked operating point.
 
 ## `budget_curve_ci.csv` (B2) — bootstrap CIs for attack metrics
-Full `bootstrap_ci.py --all-R` output (10k resamples over candidate **sets**): one row per
-`(file, stratum, R, metric)`, `metric` ∈ {promotion_into_top5, rank_gain_adv, weak_into_top5}, with
-`point`, `ci_lo`, `ci_hi`, `n_sets`, `n_targets`. Also the source for CI-annotated main-table numbers
-(e.g. causal R=50 promo@5 = 0.163 [0.123, 0.207]; rank_gain 3.44 [3.22, 3.67]). To regenerate for any
-run: `python bootstrap_ci.py <adv_*_curve.json> --all-R`.
+`bootstrap_ci.py --all-R` output (10k resamples over candidate **sets**) for the causal anchor under the
+R_max=50 convention: one row per `(file, stratum, R, metric)`, `metric` ∈ {promotion_into_top5,
+rank_gain_adv, weak_into_top5}, with `point`, `ci_lo`, `ci_hi`, `n_sets`, `n_targets`. Computed from the
+in-repo `adv_p0_baseline.json`, so it is fully reproducible from repo root:
+`python position_bias/bootstrap_ci.py position_bias_check/results/raw/adv_p0_baseline.json --all-R`.
+Source for CI-annotated numbers (causal R=50 promo@5 = 0.120 [0.083, 0.160]; rank_gain 3.34 [3.15, 3.54]).
 
 ## `tau_promo_correlation_analysis.csv` (B3) — domain-controlled audit correlation → Fig 4
 From `analyze_correlation.py` over the 24 cells in `correlation_data.csv`. Rows: `all_24_cells`,
