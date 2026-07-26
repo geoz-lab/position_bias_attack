@@ -223,7 +223,6 @@ python listt5_eval.py --config <listt5_cfg> --scorer encode --task all --out-dir
 # B4 budget curve (Fig 5 ListT5 row), R_max=R=50:
 python listt5_eval.py --config <listt5_cfg> --scorer encode --task adv \
        -R 50 --r-grid 1,5,10,20,50 --num-samples 300 --out-dir listt5_out
-#   b4_budget_t5.sbatch wraps this invocation for SLURM/Sherlock.
 ```
 
 ### Prompt ablation — can prompting remove the bias? (`position_bias_check/`)
